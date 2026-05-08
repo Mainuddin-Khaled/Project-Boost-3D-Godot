@@ -45,7 +45,7 @@ use_collision = true
 size = Vector3(2, 0.4, 2)
 material = SubResource("StandardMaterial3D_52x1o")
 
-[node name="LandPad" type="CSGBox3D" parent="." unique_id=1884179107]
+[node name="LandPad" type="CSGBox3D" parent="." unique_id=1884179107 groups=["Goal"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0.2, 0)
 use_collision = true
 size = Vector3(2, 0.4, 2)
@@ -56,3 +56,4 @@ transform = Transform3D(1, 0, 0, 0, 0.9781476, 0.2079117, 0, -0.2079117, 0.97814
 
 [node name="Player" parent="." unique_id=1046770653 instance=ExtResource("1_o6mkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 1.5, 0)
+thrust = 750.0

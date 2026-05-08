@@ -1,10 +1,17 @@
 extends RigidBody3D
 
+@export_range(750.0, 3000.0) var thrust: float = 1000.0
+@export var torque_thrust: float = 100.0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("ui_accept"):
-		apply_central_force(basis.y * delta * 1000.0)
-	if Input.is_action_pressed("ui_left"):
-		apply_torque(Vector3(0.0, 0.0, 100.0 * delta))
-	if Input.is_action_pressed("ui_right"):
-		apply_torque(Vector3(0.0, 0.0, -100.0 * delta))
+	if Input.is_action_pressed("Boost"):
+		apply_central_force(basis.y * delta * thrust)
+	if Input.is_action_pressed("Rotate Left"):
+		apply_torque(Vector3(0.0, 0.0, torque_thrust * delta))
+	if Input.is_action_pressed("Rotate Right"):
+		apply_torque(Vector3(0.0, 0.0, -torque_thrust * delta))
+
+
+func _on_body_entered(body: Node) -> void:
+	if 'Goal' in body.get_groups():
+		print("You Win!")
