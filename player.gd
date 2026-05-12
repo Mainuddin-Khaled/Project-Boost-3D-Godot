@@ -14,4 +14,14 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if 'Goal' in body.get_groups():
-		print("You Win!")
+		complete_level()
+	if 'Hazard' in body.get_groups():
+		crash_sequence()
+
+func crash_sequence() -> void:
+	print('You Lose!')
+	get_tree().reload_current_scene()
+
+func complete_level() -> void:
+	print('You Win!')
+	get_tree().quit()
