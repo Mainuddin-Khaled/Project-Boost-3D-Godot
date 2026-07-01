@@ -13,8 +13,28 @@ transform = Transform3D(0.90630776, -0.42261827, 0, 0.42261827, 0.90630776, 0, 0
 size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_uawph")
 
+[node name="Background" type="CSGBox3D" parent="." unique_id=1851053345]
+transform = Transform3D(0.90630776, -0.42261827, 0, 0.42261827, 0.90630776, 0, 0, 0, 1, -8.328298, 5.591076, -6.888857)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_uawph")
+
+[node name="Background2" type="CSGBox3D" parent="." unique_id=1250989590]
+transform = Transform3D(0.90630776, -0.42261827, 0, 0.42261827, 0.90630776, 0, 0, 0, 1, -3.41495, 5.591076, -15.016911)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_uawph")
+
 [node name="Wall2" type="CSGBox3D" parent="." unique_id=698622919]
 transform = Transform3D(0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 0, 0, 1, 14.380703, 7.7291164, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_uawph")
+
+[node name="Background3" type="CSGBox3D" parent="." unique_id=2004742081]
+transform = Transform3D(0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 0, 0, 1, 10.47126, 5.591076, -9.064472)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_uawph")
+
+[node name="Background4" type="CSGBox3D" parent="." unique_id=2139635376]
+transform = Transform3D(0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 0, 0, 1, 4.8325243, 5.591076, -14.208603)
 size = Vector3(4, 10, 4)
 material = SubResource("StandardMaterial3D_uawph")
 
